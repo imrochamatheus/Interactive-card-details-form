@@ -14,6 +14,11 @@ function setCardData(data) {
   $("#cc__cvc").text(data.cvc);
 }
 
+function toggleLoader() {
+  $("form").toggle();
+  $("#loader").toggle();
+}
+
 function toggleForm(setData) {
   $("form").toggle();
   $(".feedback").toggle();
@@ -53,14 +58,23 @@ $(document).ready(function () {
     },
 
     submitHandler: function (form) {
+      toggleLoader();
+
       const data = Object.fromEntries(new FormData(form).entries());
 
-      setCardData(data);
-      toggleForm();
+      setTimeout(() => {
+        toggleLoader();
 
-      form.reset();
+        $(".card").hide().fadeIn(100);
+
+        setCardData(data);
+        toggleForm();
+
+        form.reset();
+      }, 1000);
     },
   });
-
-  $(".feedback").hide();
 });
+
+$(".feedback").hide();
+$("#loader").hide();

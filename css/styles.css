@@ -260,18 +260,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-@keyframes pulsar {
-  0% {
-    box-shadow: 0 0 0 0 rgba(61, 46, 64, 1);
-  }
-  50% {
-    box-shadow: 0 0 0 5px rgba(33, 9, 47, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 0 10px rgba(33, 9, 47, 0.1);
-  }
-}
-
 label.error {
   color: red;
   font-size: 0.7rem;
@@ -439,7 +427,7 @@ label.error {
 
   .card__front {
     top: 0;
-    left: calc(40% - 511.03px / 3);
+    left: 10%;
     transform: rotate(-5deg);
   }
 
@@ -480,7 +468,8 @@ label.error {
 
   .card__back {
     bottom: 0;
-    left: calc(40% - 511.03px / 5);
+    left: 30%;
+    /* transform: rotate(5deg); */
     font-size: 0.875rem;
     padding: 1.75rem 2.5rem;
   }
