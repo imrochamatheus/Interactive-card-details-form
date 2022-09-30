@@ -334,6 +334,18 @@ label.error {
   }
 }
 
+@media only screen and (min-width: 576px) and (max-width: 993px) and (max-height: 830px) {
+  .cards-section {
+    transform: rotate(-30deg);
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 993px) and (max-height: 800px) {
+  .cards-section {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 993px) {
   .cards-section {
     top: 50%;
