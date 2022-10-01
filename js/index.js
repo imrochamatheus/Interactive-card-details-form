@@ -65,7 +65,7 @@ $(document).ready(function () {
       setTimeout(() => {
         toggleLoader();
 
-        $(".card").hide().fadeIn(100);
+        $(".card").hide().fadeIn(500);
 
         setCardData(data);
         toggleForm();
